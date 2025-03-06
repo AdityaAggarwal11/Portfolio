@@ -9422,7 +9422,7 @@ textarea.form-control {
 
 .contact-section .contact-form {
   width: 100%; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 900px) {
     .contact-section .contact-form .btn-primary {
       display: block;
       width: 100%; } }
