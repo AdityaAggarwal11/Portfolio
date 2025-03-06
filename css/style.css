@@ -9412,7 +9412,7 @@ textarea.form-control {
 
 .contact-section .img {
   width: 100%;
-  background-position: top center; }
+  background-position: center; }
   @media (max-width: 991.98px) {
     .contact-section .img {
       height: 500px; } }
