@@ -1,0 +1,52 @@
+pipeline {
+    agent any
+
+    environment {
+        // GitHub repository URL
+        GITHUB_REPO_URL = 'https://github.com/yourusername/yourportfolio.git'  // Replace with your GitHub Repo URL
+        DEPLOY_BRANCH = 'gh-pages'  // The branch used for GitHub Pages deployment
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                // Checkout the code from the main branch
+                git url: "${GITHUB_REPO_URL}", branch: 'main'
+            }
+        }
+
+        stage('Deploy to GitHub Pages') {
+            steps {
+                script {
+                    // Deploy to GitHub Pages (force-push to the gh-pages branch)
+                    sh '''
+                    # Create or switch to the gh-pages branch
+                    git checkout --orphan ${DEPLOY_BRANCH}
+                    
+                    # Remove all files from the current branch
+                    git rm -rf .
+                    
+                    # Copy all files from the main branch (HTML, CSS, JS)
+                    cp -R * .  # Copies everything from the root directory
+                    
+                    # Add and commit the changes
+                    git add .
+                    git commit -m "Deploy portfolio to GitHub Pages"
+                    
+                    # Push changes to the gh-pages branch (force push)
+                    git push origin ${DEPLOY_BRANCH} --force
+                    '''
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment successful! Your portfolio has been updated on GitHub Pages.'
+        }
+        failure {
+            echo 'Deployment failed! Please check the logs for errors.'
+        }
+    }
+}
