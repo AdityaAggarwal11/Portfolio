@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/AdityaAggarwal11/Portfolio.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'echo "Building portfolio..."'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'git push origin gh-pages --force'
+            }
+        }
+    }
+}
