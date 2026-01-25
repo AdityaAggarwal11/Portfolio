@@ -8922,7 +8922,7 @@ h1, h2, h3, h4, h5,
 .ftco-hireme {
   background: #ffbd39;
   position: relative;
-  z-index: -1; 
+  z-index: 10; 
   cursor: pointer;}
   .ftco-hireme h2 {
     color: #fff;
