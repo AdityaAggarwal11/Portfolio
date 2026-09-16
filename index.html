@@ -1,8 +1,18 @@
-Here is the fully updated code using the exact file you just pasted! 
+Read URL: https://adityaaggarwal11.github.io/Portfolio/style.css
+Viewed content.md:1-33
+Ran command: `curl -s https://adityaaggarwal11.github.io/Portfolio/style.css | head -n 80`
+Ran command: `wget -qO- https://adityaaggarwal11.github.io/Portfolio/style.css`
+Ran command: `python3 -c "import urllib.request; print(urllib.request.urlopen('https://adityaaggarwal11.github.io/Portfolio/style.css').read().decode('utf-8'))" > fetched_style.css`
+Viewed fetched_style.css:85-85
+Viewed fetched_style.css:1-85
 
-It keeps your new image name (`profile-image.jpeg`) and includes the new **Topmate buttons** and the **DevSecOps** tags. 
+Good catch! The massive gap is happening because the `.card` CSS class has a rule `height: 100%;` which is causing the timeline items to stretch infinitely. 
 
-Click "Copy code", paste it into GitHub, and hit Commit!
+I can easily fix this without you needing to touch the CSS file! I just added `style="height: auto;"` to those specific cards in the HTML.
+
+I also added your **QA / Testing Internship** to the **"About Me"** statistics section (right next to your Certifications) and added a **QA & Testing** tag to your skills list, completely keeping it out of the Professional Experience timeline as you requested!
+
+Here is the updated code. Just click "Copy code" and paste it in!
 
 ```html
 <!DOCTYPE html>
@@ -65,6 +75,10 @@ Click "Copy code", paste it into GitHub, and hit Commit!
                         <span class="stat-label"> Projects</span>
                     </div>
                     <div class="stat-box">
+                        <span class="stat-number">QA</span>
+                        <span class="stat-label">Testing Internship</span>
+                    </div>
+                    <div class="stat-box">
                         <span class="stat-number">2</span>
                         <span class="stat-label">AWS Certifications</span>
                     </div>
@@ -92,6 +106,7 @@ Click "Copy code", paste it into GitHub, and hit Commit!
                         <span class="tag"><i class="fa-brands fa-docker"></i> Docker</span>
                         <span class="tag"><i class="fa-solid fa-shield-halved"></i> AppSec / Burp Suite</span>
                         <span class="tag"><i class="fa-brands fa-github"></i> CI/CD Pipelines</span>
+                        <span class="tag"><i class="fa-solid fa-vial"></i> QA & Manual Testing</span>
                         <span class="tag"><i class="fa-brands fa-linux"></i> Linux OS</span>
                     </div>
                 </div>               
@@ -143,7 +158,8 @@ Click "Copy code", paste it into GitHub, and hit Commit!
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">2026 - Present</div>
-                    <div class="timeline-content card">
+                    <!-- Added inline height: auto; to fix the stretching bug! -->
+                    <div class="timeline-content card" style="height: auto;">
                         <h3>DevOps Engineer</h3>
                         <span class="company">Seesec Infotech Pvt Ltd</span>
                         <ul>
@@ -156,7 +172,8 @@ Click "Copy code", paste it into GitHub, and hit Commit!
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-date">2024 - 2026</div>
-                    <div class="timeline-content card">
+                    <!-- Added inline height: auto; to fix the stretching bug! -->
+                    <div class="timeline-content card" style="height: auto;">
                         <h3>DevOps Trainee</h3>
                         <span class="company">SAR Group</span>
                         <ul>
