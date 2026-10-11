@@ -177,26 +177,37 @@
         <div class="container">
             <h2 class="section-title">Client Engagements & Consulting</h2>
             <div style="max-width: 850px; margin: 0 auto;">
-                <div class="card" style="border-left: 4px solid var(--accent-color);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 12px;">
-                        <div>
-                            <span style="font-size: 0.85rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Consulting &bull; 6 Months</span>
-                            <h3 style="margin-top: 4px; font-size: 1.3rem;">
-                                <i class="fa-solid fa-handshake-angle" style="color: var(--accent-color); margin-right: 8px;"></i> Glued Tomatoes Private Limited
-                            </h3>
-                            <span class="company" style="font-weight: 500; color: var(--text-secondary);">QA & Security Testing Consultant</span>
+                <!-- Clickable & Hoverable Card -->
+                <a href="https://www.gluedtomatoes.com/" target="_blank" rel="noopener noreferrer" class="card" style="display: block; text-decoration: none; color: inherit; border-left: 4px solid var(--accent-color); transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 16px;">
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <!-- Official Logo Badge -->
+                            <div style="background: #0f172a; padding: 6px 14px; border-radius: 8px; display: inline-flex; align-items: center; border: 1px solid rgba(255,255,255,0.1);">
+                                <img src="https://www.gluedtomatoes.com/images/logo.png" alt="Glued Tomatoes Logo" style="height: 32px; width: auto; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                                <span style="display: none; color: #fff; font-weight: 700; font-size: 0.95rem;">GLUED TOMATOES</span>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.8rem; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Client Engagement</span>
+                                <h3 style="margin: 2px 0 0 0; font-size: 1.25rem;">Glued Tomatoes Private Limited</h3>
+                                <span class="company" style="font-weight: 500; font-size: 0.9rem; color: var(--text-secondary);">Quality Assurance & Testing Consultant</span>
+                            </div>
                         </div>
+                        <span style="color: var(--accent-color); font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+                            Visit Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </span>
                     </div>
-                    <p style="margin-top: 10px; margin-bottom: 18px; line-height: 1.6;">
-                        Delivered rigorous Quality Assurance (QA) and security testing across client applications. Formulated structured manual and regression test cycles, performed vulnerability reconnaissance using Burp Suite, and collaborated directly with developer squads to eliminate edge-case defects prior to release.
+
+                    <p style="margin-top: 10px; margin-bottom: 18px; line-height: 1.6; color: inherit;">
+                        Delivered end-to-end Quality Assurance (QA) and manual testing for the client's application. Formulated detailed test suites, authored comprehensive test scenarios, and executed thorough functional and regression testing to identify defects and ensure robust software stability.
                     </p>
+
                     <div class="tags" style="justify-content: flex-start;">
                         <span class="tag" style="background: var(--bg-color); font-size: 0.8rem;"><i class="fa-solid fa-vial"></i> QA & Manual Testing</span>
-                        <span class="tag" style="background: var(--bg-color); font-size: 0.8rem;"><i class="fa-solid fa-shield-halved"></i> AppSec / Burp Suite</span>
+                        <span class="tag" style="background: var(--bg-color); font-size: 0.8rem;"><i class="fa-solid fa-list-check"></i> Test Case Design</span>
+                        <span class="tag" style="background: var(--bg-color); font-size: 0.8rem;">Functional Testing</span>
                         <span class="tag" style="background: var(--bg-color); font-size: 0.8rem;">Regression Testing</span>
-                        <span class="tag" style="background: var(--bg-color); font-size: 0.8rem;">Release Assurance</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
